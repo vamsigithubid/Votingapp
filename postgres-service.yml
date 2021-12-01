@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  labels:
+    type: postgres-db-service
+    author: vamsi
+spec:
+  ports:
+    - targetPort: 5432
+      port: 5432
+  selector:
+    type: postgres-db
+    author: vamsi
+...
